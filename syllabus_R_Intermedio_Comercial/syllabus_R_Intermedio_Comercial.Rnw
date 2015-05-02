@@ -1,0 +1,258 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage[tablename=Tabla]{caption}
+%\doublespace %para doble espacio
+\onehalfspace %para espacio y medio
+\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+\parindent=0mm
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\begin{minipage}[d]{110mm}
+\includegraphics[scale=.50]{figures/logo_ssl.pdf}
+\end{minipage}
+\begin{minipage}[d]{50mm}
+\textsf{\textbf{\sc \tiny QUITO: Fernando Oviedo E8-65 y José Barba,}}\\
+\textsf{\textbf{\sc \tiny \qquad Sector: El Dorado}}\\
+\textsf{\textbf{\sc \tiny Contacto: (02) 2 559 703 / (593) 0998890021}}
+\end{minipage}\\
+\vspace{0.6cm}
+%\rule[1mm]{150mm}{0.5mm}
+
+\section{Quiénes somos ?}
+
+Source Stat Lab (SSL) es una empresa Ecuatoriana con sede en Quito, especializada en fomentar
+el avance del conocimiento. SSL presta servicios referentes a entrenamiento y capacitación 
+en el manejo del lenguaje de programación R, para profesionales en todas sus verticales (investigación, docencia, gestión empresarial). Adicionalmente SSL brinda capacitación, reportería y consultoría en estadística y matemática con el uso de herramientas de software libre tales como: R, RStudio, R Analytic Flow $\&$ LaTeX a empresas globales y locales, así como instituciones públicas.
+
+\section{Historia}
+
+SSL nació en Septiembre 2014, mediante la iniciativa de un grupo de ingenieros matemáticos 
+de la Escuela Politécnica Nacional, con el propósito de dar servicio y asesoramiento en investigaciones aplicadas que requieran de estudios estadísticos/matemáticos asociados a las mismas.
+
+\section{Objetivos}
+
+Entre los objetivos de SSL se encuentran:
+\begin{itemize}
+  \item Potenciar las actividades relacionadas con la Estadística que se llevan a cabo en varias universidades Ecuatorianas, así como ofrecer asesoramiento estadístico tanto a grupos de investigación como a particulares y empresas.  Dicho asesoramiento se complementa con cursos de formación adaptados a las necesidades y requerimientos del usuario.
+  \item Fomentar el uso del software estadístico R en actividades académicas, profesionales y
+  de investigación.  
+\end{itemize}
+ 
+
+\section{Cursos}
+
+Durante los últimos años, las nuevas tecnologías han permitido generar, almacenar y difundir grandes cantidades de información. Para poder extraer conocimiento y generar valor, se requieren varias herramientas analíticas.\newline
+
+Dado que la estadística es la herramienta determinante para la toma de decisiones y la
+obtención de conocimiento en la mayoría de entidades del sector público y privado, SSL oferta
+al público en genral los siguientes cursos:
+\begin{itemize}
+  \item R Nivel Básico
+  \item R Nivel Intermedio
+  \item R Nivel Avanzado
+  \item Gráficos con ggplot2
+  \item Interfaces Web con Shiny
+  \item Reportería Dinámica
+%  \item Series Temporales
+%  \item Minería de datos
+%  \item Modelos lineales y de riesgo
+\end{itemize}
+
+
+\newpage
+
+
+\begin{center}
+{\bf \Large R nivel Intermedio}
+\end{center}
+
+
+{\bf \large Descripción:}\newline
+
+Generalmente cuando se aplica una determinada heramienta estadística o matemática,
+de muestreo, de control de calidad o cuando se estima un modelo de regresión, series 
+temporales, etc. el $70\%$ del tiempo disponible es utilizado en la limpieza y depuración
+de la data disponible, por ejemplo en la detección y corrección de datos atípicos y faltantes, 
+en la unión o consolidación de la data en un solo archivo cuando esta viene dada en 
+distintas bases de datos, y únicamente el $30\%$ restante es destinado al desarrollo de la 
+herramienta técnica o construcción del modelo.\newline
+
+\begin{center}
+<<echo=FALSE,fig=TRUE,height=2.25,width=5>>=
+library(ggplot2,quietly = TRUE)
+x <- c(rep("Depuración",7),rep("Ejecución",3))
+data <- data.frame(x)
+g <- ggplot(data, aes(x=1))+
+  geom_bar(aes(fill=x),binwidth = 1) + xlim(c(1,2))+
+  annotate("text",x=c(1.5,1.5) ,y=(c(3.25,8.5)),label=c("70%","30%"),colour="white",size=5)+
+  theme(axis.text= element_blank(), axis.ticks= element_blank(),legend.position="bottom") +
+  labs(list(x="", y="",title="Tiempo empleado",fill="Actividad: "))
+g+coord_flip()
+@
+\end{center}
+
+El manejo intermedio de R busca corregir esta contradicción, pues lo ideal es destinar la 
+mayor cantidad de tiempo disponible al análisis técnico de la data, la busqueda de mejoras 
+en las metodologías empleadas y la investigación de nuevas herramientas técnicas utilizadas
+en la actualidad. Es por esta razón, que el curso R nivel Intermedio tiene dos propósitos 
+principales:
+\begin{enumerate}
+\item Proporcionar al estudiante las principales herramientas de R, utilizadas en la 
+manipulación, tratamiento y depuración de la información de un conjunto de datos 
+determinado. Luego de aprobar el curso el estudiante tendrá la capacidad de desarrollar
+códigos, que automaticen las tareas que comunmente las realiza manualmente al momento de
+trabajar con la información, capaces de adaptarse a distintas instancias que se puedan 
+presentar.
+
+\item Mostrar al estudiante la forma de como optimizar sus lineas de código tanto en 
+tiempo de ejecución como en apariencia (códigos más compactos). 
+\end{enumerate}
+
+El curso R Nivel Intermedio está dirigido a usuarios con un conocimiento básico de R. Se 
+analiza a detalle una enorme gama de R-funciones que resumen algoritmos muy empleados en 
+la práctica, las mismas que permiten acelarar el tiempo de ejecución de ciertas lineas de código y principalmente evitar malgastar el tiempo generando enormes códigos que en R ya se encuentran implementados y de una forma mucho más eficiente, por ejemplo uno de los temas a tratarse en este curso comprendende una herramienta muy empleada, la cual consiste en aplicar una misma función estadística a distintos objetos evitando usar los típicos lazos iterativos {\bf for, while, etc} que por lo general resultan ser muy poco eficientes.\newline
+  
+{\bf \large Duración:}\newline
+  20 Hrs.\newline
+  
+{\bf \large Requisitos:}\newline
+  R nivel Básico.\newline
+  
+{\bf \large Objetivos:}
+\begin{itemize}
+\item Proporcionar las principales herramientas de R, utilizadas en la manipulación, 
+tratamiento y depuración de datos.
+
+\item Mostrar la forma de como optimizar de códigos tanto en tiempo de ejecución como en
+apariencia.
+\end{itemize}
+
+{\bf \large Contenidos:}
+
+% limpieza de datos
+\begin{enumerate}
+
+\item{Manipulación y depuración de bases de datos}
+
+\begin{enumerate}
+\item[1.1]{Unión de objetos y estructuras}
+\item[1.2]{Unión de bases de datos por columnas comunes}
+\item[1.3]{Valores perdidos y recodificación}
+\item[1.4]{Filtrado y ordenamiento de bases de datos}
+\item[1.5]{Discretización de data continua}
+\item[1.6]{Muestras aleatorias}
+%\item[1.1]{Funciones paste(), cbind(), rbind()}
+%\item[1.2]{Funciones merge(), match(), grep(), etc.}
+%\item[1.3]{Funciones sort(), order()}
+%\item[1.5]{Funciones cut(), shingle()}
+\end{enumerate}
+
+\item{Aplicación de funciones a cada elemento de un objeto}
+\begin{enumerate}
+\item[2.1]{Aplicación de funciones a una matriz o arreglo.}
+ %Función apply()
+\item[2.2]{Aplicación de funciones a un vector, lista, data frame.}
+% Función lapply(), sapply()
+\item[2.3]{mapply(), versión multivariante de sapply()}
+\item[2.4]{Aplicación de funciones a subgrupos de la data.}
+ %Función tapply()
+%\item[2.5]{Aplicación de una función a subgrupos de un data frame.}
+ %Función by()
+% rowSums(), colSums(), rowMeans(), and colMeans()
+\end{enumerate}
+
+\item{Funciones vectoriales}
+\begin{enumerate}
+\item[3.1]{Funciones Vectoriales más utilizadas.}
+ %ifelse(), pmin(), pmax(), cumsum(), diff().
+\item[3.2]{Creación de Funciones Vectoriales.}
+%Vectorize()
+\end{enumerate}
+
+\item{R-Funciones brillantes}
+\begin{enumerate}
+\item[4.1]{Funciones lógicas.}
+%any(), all(), ifelse(), is.na(), noNA(x)
+\item[4.1]{Funciones matemáticas.}
+%abs(), acos(), asin(), atan(), beta(), ceil(),
+%ceiling(), choose(), cos(), cosh(), digamma(), exp(), expm1(),
+%factorial(), floor(), gamma(), lbeta(), lchoose(), lfactorial(),
+%lgamma(), log(), log10(), log1p(), pentagamma(), psigamma(), round(),
+%signif(), sin(), sinh(), sqrt(), tan(), tanh(), tetragamma(),
+%trigamma(), trunc().
+\item[4.1]{Resúmenes escalares.}
+%mean(), min(), max(), sum(), sd(), and (for vectors) var().
+\item[4.1]{Resumenes Vectoriales.}
+%cumsum(), diff(), pmin(), and pmax().
+\item[4.1]{Buscando valores especificos en un objeto.}
+%match(), self_match(), which_max(), which_min().
+\item[4.1]{Eliminación de registros duplicados.}
+%duplicated(), unique().
+\end{enumerate}
+
+%\item{El paquete dplyr}
+
+\end{enumerate}
+
+
+{\bf \large Bibliografía:}
+\begin{enumerate}
+\item Teetor, P. (2011). \emph{R cookbook}. O’Reilly Media, Inc. United States of America.
+\item Matloff, N. (2011). \emph{The art of R programming: tour of statistical software design}.
+No Starch Press, Inc. San Francisco.
+\end{enumerate}
+
+
+{\bf \large Métodos de evaluación.}\newline
+
+La forma de evaluación se resume en la tabla siguiente, el estudiante aprobará el curso con una
+calificación superior o igual a $7/10$ puntos.
+
+\begin{table}[htbp]
+\centering
+\resizebox{9cm}{!} {
+%\begin{center}
+\begin{tabular}{ l c c c }
+     \hline
+    Método de evaluación &  Número & Puntaje & Porcentaje \\ \hline
+    \hline
+    Pruebas parciales &  2 & 4 & $40\%$ \\ 
+    Deberes &	2 & 2	& $20\%$ \\ 
+    Trabajo final &  1 & 2 & $20\%$ \\ 
+    Examen final &  1 & 2 & $20\%$ \\ \hline 
+    Total &  6 & 10 & $100\%$ \\
+\end{tabular}
+%\end{center}
+}
+      \caption{Métodos de evaluación.}
+      %\label{tab:Factor de ponderación Patrimonio técnico}
+\end{table}
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
