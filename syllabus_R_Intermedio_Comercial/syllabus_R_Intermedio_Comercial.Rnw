@@ -130,7 +130,30 @@ analiza a detalle una enorme gama de R-funciones que resumen algoritmos muy empl
 la práctica, las mismas que permiten acelarar el tiempo de ejecución de ciertas lineas de código y principalmente evitar malgastar el tiempo generando enormes códigos que en R ya se encuentran implementados y de una forma mucho más eficiente, por ejemplo uno de los temas a tratarse en este curso comprendende una herramienta muy empleada, la cual consiste en aplicar una misma función estadística a distintos objetos evitando usar los típicos lazos iterativos {\bf for, while, etc} que por lo general resultan ser muy poco eficientes.\newline
   
 {\bf \large Duración:}\newline
-  20 Hrs.\newline
+
+El curso tiene una duración de 20 horas (2 horas diarias durante 10 días), las cuales se
+encuentran distribuidas tal como muestra la siguiente tabla:\newline
+  
+\begin{table}[htbp]
+\centering
+\resizebox{7cm}{!} {
+%\begin{center}
+\begin{tabular}{ l c c  }
+     \hline
+    Actividad &  Horas & Porcentaje \\ \hline
+    \hline
+    Clase magistral &  18 & $90\%$ \\ 
+    Evaluaciones &  2 & $10\%$ \\ \hline
+    Total &  20 & 100$\%$ \\
+\end{tabular}
+%\end{center}
+}
+      \caption{Duración curso en horas .}
+      %\label{tab:Factor de ponderación Patrimonio técnico}
+\end{table}
+
+  
+  
   
 {\bf \large Requisitos:}\newline
   R nivel Básico.\newline
